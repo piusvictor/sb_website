@@ -1,0 +1,169 @@
+
+.container-fluid{
+    padding-left: 7.5% !important;
+    padding-right: 7.5% !important;
+    position: relative;
+}
+
+
+.left-sidebar{
+    position: fixed;
+    top:54%;
+    left:3%;
+    transform:translateY(-50%);
+
+
+}
+
+
+.left-sidebar:hover{
+    cursor: pointer;
+}
+.pre-menu-border{
+    position: fixed;
+    top:54%;
+    left:-382px;
+    transform:translateY(-50%);
+    width: 390px;
+    min-height: 470px; 
+    border-radius: 0px 20px 20px 0px;
+    background-color: rgb(249,212,161);  
+   z-index:999;
+    transition: left 0.1s ease-in;
+   
+}
+
+.pre-menu-contents{
+    width:380px;
+   z-index:9999;
+    min-height: 470px;
+    border-radius: 0px 20px 20px 0px;
+    background-color:rgb(234,147,26);
+    padding-bottom: 20px;
+
+}
+
+li{
+    list-style-type: none;
+    margin-left:0px;
+}
+
+.vertical-text{
+    writing-mode: vertical-rl;
+   text-orientation: mixed;
+    font-weight:bold;
+    font-size: 20px;
+    margin-left: -135%;
+    
+    
+}
+
+.menu-caret{
+    color:rgb(233, 155, 10);
+}
+
+
+
+#search:focus{
+background-color: white;
+box-shadow: inset 0 1px 1px rgba(255, 251, 251, 0), 0 0 8px rgba(255, 255, 255, 0);
+}
+
+#search{
+    font-size:18px;
+}
+
+  body {
+    font-family: Ubuntu, "times new roman", times, roman, serif;
+}
+
+a:hover{
+    text-decoration: none;
+}
+
+.top-menu{
+    font-weight:bold ;
+    margin-left: -5%;
+}
+
+.top-menu-separator{
+    font-weight:400 ;
+}
+
+.slide-img{
+    margin-left:-5.7%;
+    
+    width:650px;
+
+    position:relative;      
+}
+
+
+.slide-img-caption{
+    left: 100.1%;
+    top:22%;
+    min-width:51.9%;
+    height: 60.0%;
+    position:absolute; 
+    background-color: rgba(187, 117, 13, 0.822);
+
+}
+
+.slide-img-caption1{
+    left: 100.1%;
+    top:22%;
+    min-width:51.9%;
+    height: 60.0%;
+    position:absolute; 
+    background-color: rgba(129, 127, 124, 0.822);
+
+}
+
+.slider-contents{
+    padding: 13px 23px;
+   color:white;
+   font-weight: 550; 
+}
+
+.slider-contents-1{
+    padding: 13px 23px;
+   color:white;
+   font-weight: 550; 
+}
+
+.slider-bullets{
+    
+   margin-left: 55%;
+}
+
+
+.slider-indicator{
+    width: 8px;
+    height:25px;
+    background-color:rgb(245, 202, 121);
+    margin-right: 8px;
+    margin-top: -7px;
+    
+}
+
+.slider-indicator1{
+    width: 8px;
+    height:25px;
+    background-color:transparent;
+    margin-right: 8px;
+    margin-top: -7px;
+    border: 2px solid rgb(245, 202, 121);
+    
+}
+
+
+
+
+
+
+
+
+
+
+
+
