@@ -1,0 +1,771 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet"  href="./css/home.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet">
+
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css" integrity="sha512-5A8nwdMOWrSz20fDsjczgUidUBR8liPYU+WymTZP1lmY9G6Oc7HlZv156XqnsgNUzTyMefFTcsFH/tnJE/+xBg==" crossorigin="anonymous" />
+
+      <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+
+
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <title>SpeechBase mobile version</title>
+
+    <style>
+
+
+        
+
+
+
+        .goog-te-banner-frame.skiptranslate {
+            display: none !important;
+            } 
+
+            *{
+                scroll-behavior: smooth; 
+            }
+
+            .search-categories::-webkit-scrollbar {
+                width: 0;  /* Remove scrollbar space */
+                background: transparent;  /* Optional: just make scrollbar invisible */
+            }
+            /* Optional: show position indicator in red */
+            .search-categories::-webkit-scrollbar-thumb {
+                background: transparent;  /* Optional: just make scrollbar invisible */
+            
+            }
+            body {                
+                top: 0px !important; 
+                scroll-behavior: smooth;
+                }
+
+                .goog-logo-link {display:none !important;} 
+                .goog-te-gadget{color: transparent !important;}
+
+                #google_translate_element{
+                    position: fixed;
+                    top:9.5%;
+                    right:1%;
+                    background-color:rgba(0, 0, 0, 0.5);
+                    padding:20px;
+                    border-radius:10px;  
+                }
+
+                #google_translate_element::before{
+                    content: "";
+                    position: absolute;
+                    top:-17.4%;
+                    right:25%;
+                    background-color:rgba(0, 0, 0, 0.5);
+                   width: 20px;
+                   height: 20px;                   
+                   z-index: -1;
+                   clip-path: polygon(49% 36%, 0% 100%, 100% 100%);
+                    transition: all .5s;
+                }
+
+                #google_translate_element.scrolled::before{
+                    content: "";
+                    position: absolute;
+                    top:-17.4%;
+                    right:25%;
+                    background-color:rgba(0, 0, 0, 0);
+                   width: 20px;
+                   height: 20px;                   
+                   z-index: -1;
+                   clip-path: polygon(49% 36%, 0% 100%, 100% 100%);
+                   transition: all .5s;
+                }
+
+
+                .swiper-container {
+                    width: 100%;
+                    height: 200px;
+                    display: flex;
+                    justify-content: center;
+                  }
+
+
+                  .swiper-slide {
+                    text-align: center;
+                    font-size: 18px;
+                    background: #fff;
+                    position: relative;
+              
+                    /* Center slide text vertically */
+                    display: -webkit-box;
+                    display: -ms-flexbox;
+                    display: -webkit-flex;
+                    display: flex;
+                    -webkit-box-pack: center;
+                    -ms-flex-pack: center;
+                    -webkit-justify-content: center;
+                    justify-content: center;
+                    -webkit-box-align: center;
+                    -ms-flex-align: center;
+                    -webkit-align-items: center;
+                    align-items: center;
+                  }
+
+
+
+
+
+
+                
+
+
+
+
+
+
+
+    </style>
+</head>
+<body>
+
+
+<!--Google Translator section-->
+
+<div style="position: absolute;top: 0px;left: 5px;z-index:2" id="translator-container">
+    
+    <div style="position:relative">
+        
+        <div id="google_translate_element">
+            <h5 style="color:white">Change Language:</h5>
+            <div style="position: absolute;color:white;top:2px;right:10px;cursor:pointer" id="close-btn">
+                Close <i class="fa fa-times-circle-o notranslate" aria-hidden="true"></i>
+            </div>
+        </div> 
+    </div>
+</div>
+
+<!--/Google Translator section-->
+
+
+
+<!--Top Searchbar-->
+    <div class="top-search-bar">
+
+        <div class="search-text-container">
+            <div class="search-back-arrow">
+                <span class="material-icons" style="color:#E99119">keyboard_backspace</span>
+            </div>
+            <div class="search-text">
+                <input type="text"  placeholder="Search speechbase" id="search-text" class="">
+            </div>
+        </div>
+
+        <div class="search-categories">
+            <div class="category-chip active">Neurological</div>
+            <div class="category-chip">Hearing Impairement</div>
+            <div class="category-chip">Developmental Language Disorder</div>
+            <div class="category-chip">Augmented and Alternative Communication</div>
+        </div>
+        
+    </div>
+<!--/Top Searchbar-->
+
+
+    <div class="bottom-sheet">
+        <div class="bottom-sheet-top">
+
+        </div>
+        <div>
+
+        </div>
+    </div>
+    
+    <div class="container1" style="position: relative;">
+        <div class="fab-btn shadow">
+         <!--<h1><b> +</b></h1>--> 
+         <span class="material-icons text-light mx-3 my-3 notranslate" style="cursor: pointer;">keyboard_arrow_up</span>
+        </div>
+
+        <div class="nav-overlay">
+        </div>
+
+        
+
+        <div class="side-nav" id="side-nav">
+            <div class="side-nav-top pl-5 mb-5 pt-4">
+                <img src="./images/welcome.svg" alt="" width="150" height="150">
+            </div>
+            <div style="text-align: center;">
+               <span style="font-size: 20px;color:#E99119">Menu</span> 
+            </div>
+            <a href="#"><span class="material-icons text-secondary mx-3 my-3 notranslate" >home</span> <span>SLT Practice Management for clinics and Schools</span> </a>
+            <a href="#" data-dropdown="dropdown1"><span class="material-icons text-secondary mx-3 my-3 notranslate" >visibility</span> <span style="display: inline-block;width:200px">Education and Certification</span> <span class="material-icons text-secondary mx-3 my-3 notranslate" >keyboard_arrow_down</span></a>
+            
+            <ul class="dropdown-sidemenu" id="dropdown1">
+                <li onclick="window.location.assign('explore.html')" class="dropdown-sidemenu-item">Neurological</li>
+                <li class="dropdown-sidemenu-item">Hearing Impairement</li>
+                <li class="dropdown-sidemenu-item">AAC</li>
+                <li class="dropdown-sidemenu-item">DLD</li>
+            </ul>
+            
+            
+            <a href="#"><span class="material-icons text-secondary mx-3 my-3 notranslate" >new_label</span> <span>SLT Science</span></a>
+            <a href="#" data-dropdown="dropdown2"><span class="material-icons text-secondary mx-3 my-3 notranslate" >manage_accounts</span> <span style="display: inline-block;width:200px">Affected people and Relatives</span><span class="material-icons text-secondary mx-3 my-3 notranslate" >keyboard_arrow_down</span></a>
+
+             <ul class="dropdown-sidemenu" id="dropdown2">
+                <li class="dropdown-sidemenu-item">Neurological</li>
+                <li class="dropdown-sidemenu-item">Hearing Impairement</li>
+                <li class="dropdown-sidemenu-item">AAC</li>
+                <li class="dropdown-sidemenu-item">DLD</li>
+            </ul>
+            <a href="#"><span class="material-icons text-secondary mx-3 my-3 notranslate" >manage_accounts</span> <span>Advocacy, Community and Network</span></a>
+            <a href="#"><span class="material-icons text-secondary mx-3 my-3 notranslate" >manage_accounts</span> <span>Policy and Decision makers</span></a>
+        
+        <div style="min-height: 1px;width:100%;background-color:#ddd" class="mt-3 mb-5">
+
+        </div>
+
+
+        <div style="text-align: center;">
+            <span style="font-size: 20px;color:#E99119" >Who we are</span> 
+         </div>
+         <a href="#"><span class="material-icons text-secondary mx-3 my-3 notranslate" >home</span> <span>About us</span> </a>
+         <a href="#"><span class="material-icons text-secondary mx-3 my-3 notranslate" >visibility</span> <span>Mission & Vision</span></a>
+         <a href="#"><span class="material-icons text-secondary mx-3 my-3 notranslate" >new_label</span> <span>Contact Us</span></a>
+         
+     
+         <div style="min-height: 1px;width:100%;background-color:#ddd" class="mt-3 mb-5">
+
+        </div>
+        
+
+
+     <div style="text-align: center;">
+        <span style="font-size: 20px;color:#E99119">Others</span> 
+     </div>
+     <a href="#"><span class="material-icons text-secondary mx-3 my-3 notranslate" >home</span> <span>Settings</span> </a>
+     <a href="#"><span class="material-icons text-secondary mx-3 my-3 notranslate" >visibility</span> <span>Privacy & Policy</span></a>
+    
+        
+        </div>
+        <div class="top-bar " style="background-color: white;margin:0px;padding:10px 20px">
+            <div style="display: flex;align-items:center">
+               
+                <div class="mr-4 top-bar-menu"> <img src="./images/menu_4.png" class="side-menu-icon" alt="menu" style="width:45px"></div>
+                <div> <img src="./images/sb_logo.png" alt="menu" class="logo"></div>
+            </div>
+
+            <div style="display: flex;align-items:center" >
+                <div class="nav-primary">
+                    <span style="color:#b66c06c0">Home</span> &nbsp; AboutUs &nbsp; Specialization &nbsp; contactUs
+                </div>
+                <span class="material-icons notranslate" style="font-size: 2.5em;color:#000051">accessible</span>
+                <span class="material-icons notranslate" id="translate" style="font-size: 2.5em;color:#000051">translate</span>                
+                <span class="material-icons search-button notranslate" style="font-size: 2.5em;color:#E99119">search</span>
+            </div>
+
+        </div>
+
+
+<!--Hero section-->
+
+
+<div class="hero-section">
+    
+<div class="hero-spacer"></div>
+    <div class="hero-container">
+        <div class="strip-blur"></div>
+        <div class="hero-section-content">
+            <h3 style="text-align: center;color:#ddd">Learn and help Others</h3>
+            <p style="text-align: center;color:rgb(240, 239, 239);font-size:1.1em;font-weight:400">
+                We educate you on how to deal with different
+impairments and disorders on <em>Neurological,
+Hearing, Language Developmental and 
+Augmented Communication</em>
+            </p>
+            <p style="text-align: center;color:rgba(221, 221, 221, 0.753)">Choose category below to get information</p>
+            <p style="display: flex;justify-content:center;gap:2em;margin-bottom:30px">
+                <button class="caregive-button">Affected Person</button>
+                <button class="slt-button">SLT Professional</button>
+            </p>
+            <p style="text-align: center;font-weight:400;color:#F5E9DE;font-size:1.1em" >
+                About Us ->
+            </p>
+        </div>
+    </div>
+    
+</div>
+
+<!--/Hero section-->
+
+
+
+<!--articles mobile-->
+
+<div class="article-mobile">
+    <div class="mt-3 px-3">
+        <span class="section-header">Articles</span> 
+     </div>
+
+     <div class="slider mt-4 px-3">
+         
+         <div class="horizontal-slider">
+             <div class="slider-content">
+                 <img src="./images/pic1.PNG" alt="pic1">
+                 <div class="slider-caption">
+                     <h5>Nifanyeje kuepuka ulemavu wa kuskia?</h5>
+                     <p><a href="#">Bonyeza Hapa Kusoma</a></p>
+                 </div>
+             </div>
+             <div class="slider-content">
+                 <img src="./images/pic2.PNG" alt="pic2">
+                 <div class="slider-caption">
+                     <h5>Zifahamu Njia za kumsaidia mtoto asiyeskia</h5>
+                     <p><a href="#">Bonyeza Hapa Kusoma</a></p>
+                 </div>
+             </div>
+
+             <div class="slider-content">
+                 <img src="./images/pic3.PNG" alt="pic3">
+                 <div class="slider-caption">
+                     <h5>Je ulemavu wa kuskia unasababisha shida ...</h5>
+                     <p><a href="#">Bonyeza Hapa Kusoma</a></p>
+                 </div>
+             </div>
+         </div>
+     </div>
+</div>   
+<!--/articles mobile-->
+
+           
+
+              <!--News-mobile-->
+<div class="news-mobile">
+    
+    <div class="mt-5 px-3 mb-4 ">
+        <h3 class="section-header">News</h3> 
+     </div>
+
+     <div class="news-section mt-2 px-3 mb-4">
+          <div class="image">
+            <img src="./images/pic1.PNG" alt="pic3" width="95%" height="120px" style="object-fit:cover ;border-radius: 5px;">
+          </div>
+          <div class="details">
+              <h6>Kutatua matatizo ya kusikia</h6>
+             
+            <p>
+Lorem ipsum dolor sit amet
+
+              </p>
+          </div>
+     </div>
+
+     <hr style="width: 90%;">
+
+
+     <div class="news-section mt-2 px-3 mb-4">
+        <div class="image">
+          <img src="./images/pic4.PNG" alt="pic3" width="95%" height="120px" style="object-fit:cover ;border-radius: 5px">
+        </div>
+        <div class="details">
+            <h6>Kutatua matatizo ya kusikia</h6>
+           
+          <p>
+Lorem ipsum dolor sit amet
+
+            </p>
+        </div>
+   </div>
+
+   <hr style="width: 90%;">
+
+   <div class="news-section mt-2 px-3 mb-4">
+    <div class="image">
+      <img src="./images/pic5.PNG" alt="pic5" width="95%" height="120px" style="object-fit:cover ;border-radius: 5px">
+    </div>
+    <div class="details">
+        <h6>Kutatua matatizo ya kusikia</h6>
+      <p>
+Lorem ipsum dolor sit amet
+
+        </p>
+    </div>
+</div>
+</div>
+             <!--/News-mobile-->
+
+
+
+              <!--Article-News-desktop-->
+              <div class="article-news-title">
+                 Articles and <span style="color: rgba(128, 128, 128, 0.89);"> News</span> 
+              </div>
+                    <div class="article-news">
+                        <div class="articles">
+
+                              <!-- Swiper -->
+  <div class="swiper-container s2" style="height: 400px !important;">
+    <div class="swiper-wrapper">
+
+      <div class="swiper-slide" style="position: relative;">
+          <div class="swiper-slider-content">
+                <img src="images/pic1.PNG" alt="" class="swiper-slider-img">
+                
+          </div>
+          <div class="swiper-slider-caption">
+            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Vel explicabo asperiores...
+            <p><span>Soma zaidi</span></p>                 
+        </div>
+      </div>
+      <div class="swiper-slide">
+          <div class="swiper-slider-content">
+                <img src="images/pic2.PNG" alt="" class="swiper-slider-img">
+               
+          </div>
+
+          <div class="swiper-slider-caption">
+            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Vel explicabo asperiores... 
+            <p> <span>Soma zaidi</span> </p>                 
+        </div>
+      </div>
+
+      <div class="swiper-slide">
+          <div class="swiper-slider-content">
+                <img src="images/pic5.PNG" alt="" class="swiper-slider-img">
+               
+          </div>
+
+          <div class="swiper-slider-caption">
+            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Vel explicabo asperiores...
+            <p><span>Soma zaidi</span></p>                 
+        </div>
+      </div>
+
+
+
+
+     
+     
+    </div>
+   
+ <!-- Add Pagination -->
+ <div class="swiper-pagination"></div>
+
+  </div>
+
+
+
+
+                        </div>
+                        <div class="news">
+                            <h5 style="text-align: center;padding:0.5em;color:grey">NEWS</h5><hr>
+                            <div class="news-container">
+                                <marquee behavior="" direction="up" scrollamount="3" onmouseover="this.stop();" onmouseout="this.start();">
+                                    <div class="news-content">
+                                        <h5 style="color:rgb(179, 109, 5);">Upatikanaji wa suluhu ya ukiziwi</h5>
+                                        <p style="font-size: 1.1em;margin-top:-10px">Watu wamejipanga vizuri kupambana na hali ya kutoskia
+                                            <p> <span style="color:rgb(187, 107, 2) ; border:1px solid #E99119;border-radius:15px;padding:3px 6px;font-size:0.9em">Readmore</span></p>
+                                        </p>
+                                    </div>
+
+                                    <div class="news-content">
+                                        <h5 style="color:rgb(179, 109, 5);">Upatikanaji wa suluhu ya ukiziwi</h5>
+                                        <p style="font-size: 1.1em;margin-top:-10px">Watu wamejipanga vizuri kupambana na hali ya kutoskia <p> <span style="color:rgb(187, 107, 2) ; border:1px solid #E99119;border-radius:15px;padding:3px 6px;font-size:0.9em">Readmore</span></p> </p>
+                                        
+                                    </div>
+
+
+                                </marquee>
+                            </div>
+                        </div>
+                    </div>
+             <!--/Article-News-desktop-->
+
+
+
+
+
+
+
+
+
+
+
+     
+
+   <!-- <hr style="width: 90%;"> -->
+
+   <div class="our-specialization">
+       <div class="specialization-heading">
+            <span style="color: rgb(165, 163, 163);">Our </span>Specialization
+       </div>
+
+
+
+
+
+       <div class="specialization-flex-container" style="display: flex;flex-wrap:wrap;justify-content:center;gap:40px">
+           <div class="specialization-container">
+                <div class="specialization-image">
+                    <img src="brain1.svg" alt="" width="150">
+                </div>
+                <div class="specialization-details">
+                    <h4 style="color: rgb(14, 13, 13);text-align:center">Neurological Impairement</h4>
+                    <p style="text-align: center;color:rgb(100, 100, 100);line-height:1.4em;font-size:0.8em">
+                        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Cum a cupiditate tempore libero itaque minima, exercitationem distinctio!
+                    </p>                
+                </div>
+                <div class="specialization-button">
+                    <button>Read More</button>
+                </div>
+           </div>
+    
+           <div class="specialization-container">
+            <div class="specialization-image">
+                <img src="hearing.svg" alt="" width="150">
+            </div>
+            <div class="specialization-details">
+                <h4 style="color: rgb(14, 13, 13);text-align:center">Hearing Impairement</h4>
+                <p style="text-align: center;color:rgb(100, 100, 100);line-height:1.4em;font-size:0.8em">
+                    Lorem ipsum dolor sit, amet consectetur adipisicing elit. Cum a cupiditate tempore libero itaque minima, exercitationem distinctio!
+                </p>                
+            </div>
+            <div class="specialization-button">
+                <button>Read More</button>
+            </div>
+       </div>
+    
+       <div class="specialization-container">
+        <div class="specialization-image">
+            <img src="clinic.svg" alt="" width="150">
+        </div>
+        <div class="specialization-details">
+            <h4 style="color: rgb(14, 13, 13);text-align:center">Language Disorder</h4>
+            <p style="text-align: center;color:rgb(100, 100, 100);line-height:1.4em;font-size:0.8em">
+                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Cum a cupiditate tempore libero itaque minima, exercitationem distinctio!
+            </p>                
+        </div>
+        <div class="specialization-button">
+            <button >Read More</button>
+        </div>
+    </div>
+    
+  
+
+       </div>
+
+
+
+
+
+
+   </div>
+
+
+
+<div class="collaborators " style="margin-top:20px">
+
+<div class="section-header" style="text-align:center;margin-bottom:30px;margin-top:40px"> <span style="color:grey">Project </span> Partners</div>
+
+     <!-- Swiper -->
+  <div class="swiper-container s1">
+    <div class="swiper-wrapper">
+      <div class="swiper-slide"><img src="images/muhas.png" alt="muhas"></div>
+      <div class="swiper-slide"><img src="images/kenyata.png" alt="kenyata"></div>
+      <div class="swiper-slide"><img src="images/kcmc.png" alt="kenyata"></div>
+      <div class="swiper-slide"><img src="images/german.png" alt="kenyata"></div>
+      <div class="swiper-slide"><img src="images/daad.png" alt="kenyata"></div>
+      <div class="swiper-slide"><img src="images/southafrica.png" alt="kenyata"></div>
+      <div class="swiper-slide"><img src="images/speechbase.png" alt="kenyata"></div>
+      
+    </div>
+    <!-- Add Pagination -->
+    <!-- <div class="swiper-pagination"></div> -->
+    <!-- Add Arrows -->
+    <!-- <div class="swiper-button-next"></div>
+    <div class="swiper-button-prev"></div> -->
+  </div>
+</div>
+
+
+
+
+
+<div class="footer">
+    <div class="upper-section">
+        <div class="footer-item" style="position: relative;">
+
+            <div style="position: absolute;top:0;right:-257px">
+                <img src="/images/project-partners.PNG" alt="" width="350px">
+            </div>
+            
+        </div>
+        <div class="footer-item">
+            <h5>MAIN</h5>
+            <a href="">Home</a>
+            <a href="">About Us</a>
+            <a href="">Vision</a>
+            <a href="">Mission</a>
+            <a href="">Contact Us</a>
+        </div>
+        <div class="footer-item">
+            <h5>RELATED LINKS</h5>
+            <a href="">Muhas</a>
+            <a href="">Kenyata</a>
+            <a href="">Pretoria</a>
+            <a href="">German</a>
+        </div>
+        <div class="footer-item">
+            <h5>SOCIAL LINKS</h5>
+            <div class="social-links">
+                <i class="fa fa-instagram"></i>
+                <i class="fa fa-facebook-square"></i>
+                <i class="fa fa-twitter-square"></i>
+                <i class="fa fa-linkedin-square"></i>
+            </div>
+            <div>
+               
+                <p>
+                    <p style="margin-top: 20px;opacity:0.7">Download our App</p>
+                    <img src="images/get_it.png" alt="get_it" width="128px" style="margin-top: -50px;">
+                </p>
+            </div>
+        </div>
+    </div>
+    <div class="bottom-section">
+        All rights reserved SpeechBase&copy2021
+    </div>
+</div>
+
+
+    </div>
+    <script src="./dist/needsharebutton.js"></script>
+    <script src="./js/scripts.js"></script>
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+
+
+    <script type="text/javascript"> 
+		function googleTranslateElementInit() { 
+			new google.translate.TranslateElement( 
+				{pageLanguage: 'en'}, 
+				'google_translate_element' 
+			); 
+		} 
+	</script> 
+	
+	<script type="text/javascript" src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script> 
+
+    <script>
+        const google_translate_element=document.querySelector('#google_translate_element');
+        const translate=document.querySelector('#translate');
+        const fab_btn=document.querySelector('.fab-btn');
+
+        var is_translate_visible=true;
+
+       
+
+
+        window.onscroll=function(){
+            console.log('window is scrolled', window.scrollY);
+            (window.scrollY>10)?(google_translate_element.classList.add('scrolled'),fab_btn.style.opacity='1',fab_btn.style.visibility='visible'):(google_translate_element.classList.remove('scrolled'),fab_btn.style.opacity='0',fab_btn.style.visibility='hidden');
+        }
+
+        document.addEventListener('DOMContentLoaded',()=>{
+            console.log("DOM Loaded",window.screenTop);
+           
+            const translatorContainer=document.querySelector("#translator-container");
+            const closeBtn=document.querySelector("#close-btn");
+
+            closeBtn.addEventListener('click',function(){
+                translatorContainer.style.display="none";
+            })
+
+            translate.onclick=function(){
+                (is_translate_visible)?(console.log('visible'),is_translate_visible=true,translatorContainer.style.display="none",is_translate_visible=false):(console.log('hidden'),is_translate_visible=true,translatorContainer.style.display="block")
+            }
+
+
+
+            fab_btn.onclick=function(){
+               window.scroll(0,0);
+               console.log('fab clicked')
+            }
+
+        });
+
+
+
+
+
+        //Article Swiper
+
+        var swiper1 = new Swiper('.s2', {
+            direction: 'vertical',
+            autoplay: {
+                delay: 3500,
+                disableOnInteraction: false,
+              },
+            pagination: {
+              el: '.swiper-pagination',
+              clickable: true,
+            },
+          });
+
+
+          document.querySelector('.s2').onmouseenter=function(){
+              swiper1.stopAutoplay();
+          }
+
+          document.querySelector('.s2').onmouseleave=function(){
+            swiper1.startAutoplay();
+        }
+
+        //Article swiper ends
+
+
+
+        //Logo Swiper
+        var swiper = new Swiper('.s1', {
+            spaceBetween: 30,
+            centeredSlides: false,
+            autoplay: {
+              delay: 2500,
+              disableOnInteraction: false,
+            },
+            pagination: {
+              el: '.swiper-pagination',
+              clickable: true,
+            },
+            navigation: {
+              nextEl: '.swiper-button-next',
+              prevEl: '.swiper-button-prev',
+            },
+            breakpoints: {
+              '@0.00': {
+                slidesPerView: 1,
+                spaceBetween: 10,
+              },
+              '@0.75': {
+                slidesPerView: 2,
+                spaceBetween: 20,
+              },
+              '@1.00': {
+                slidesPerView: 3,
+                spaceBetween: 40,
+              },
+              '@1.50': {
+                slidesPerView: 4,
+                spaceBetween: 50,
+              },
+            }
+          });
+          
+    </script>
+</body>
+</html>

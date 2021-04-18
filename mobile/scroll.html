@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+
+        .parent{
+            display: flex;
+        }
+        .child {
+          width: 100px;
+          white-space: nowrap;
+          overflow-x: scroll;
+          scroll-behavior: smooth;
+          margin-left: 20px;
+          margin-right: 20px;
+        }
+
+        .child::-webkit-scrollbar {
+            width: 0px;            
+          display: none;
+                     /* width of the entire scrollbar */
+          }
+
+          .child::-webkit-scrollbar-track {
+            background: orange;        /* color of the tracking area */
+          }  
+        </style>
+</head>
+<body>
+    
+        
+        <script>
+        (function(w){
+            w.addEventListener('load', function(){
+                const   btn_left = document.getElementById('btn-left'),
+                        btn_right = document.getElementById('btn-right'),
+                        content = document.getElementById('con');
+                const content_scroll_width = content.scrollWidth;
+                let content_scoll_left = content.scrollLeft;
+                btn_right.addEventListener('click', () => {
+                    content_scoll_left += 100;
+                    if (content_scoll_left >= content_scroll_width) { content_scoll_left = content_scroll_width; }
+                    content.scrollLeft = content_scoll_left;
+                });
+                btn_left.addEventListener('click', () => {
+                    content_scoll_left -= 100;
+                    if (content_scoll_left <= 0) {
+                        content_scoll_left = 0;
+                    }
+                    content.scrollLeft = content_scoll_left;
+                });
+            });
+        })(window);
+        </script>
+        
+        <div class="parent">
+            <button id="btn-left">Left scroll</button>
+             <div class="child" id="con">
+                        Lorem Ipsum. Lorem Ipsum. Lorem Ipsum. Lorem Ipsum. Lorem Ipsum. Lorem Ipsum. Lorem Ipsum. Lorem Ipsum. Lorem Ipsum.
+                        Lorem Ipsum. Lorem Ipsum. Lorem Ipsum. Lorem Ipsum. Lorem Ipsum. Lorem Ipsum. Lorem Ipsum. Lorem Ipsum. Lorem Ipsum.
+                        Lorem Ipsum. Lorem Ipsum. Lorem Ipsum. Lorem Ipsum. Lorem Ipsum. Lorem Ipsum. Lorem Ipsum. Lorem Ipsum. Lorem Ipsum.
+                        Lorem Ipsum. Lorem Ipsum. Lorem Ipsum. Lorem Ipsum. Lorem Ipsum. Lorem Ipsum. Lorem Ipsum. Lorem Ipsum. Lorem Ipsum.
+                        Lorem Ipsum. Lorem Ipsum. Lorem Ipsum. Lorem Ipsum. Lorem Ipsum. Lorem Ipsum. Lorem Ipsum. Lorem Ipsum. Lorem Ipsum.
+                        Lorem Ipsum. Lorem Ipsum. Lorem Ipsum. Lorem Ipsum. Lorem Ipsum. Lorem Ipsum. Lorem Ipsum. Lorem Ipsum. Lorem Ipsum.
+                        Lorem Ipsum. Lorem Ipsum. Lorem Ipsum. Lorem Ipsum. Lorem Ipsum. Lorem Ipsum. Lorem Ipsum. Lorem Ipsum. Lorem Ipsum.
+                        Lorem Ipsum. Lorem Ipsum. Lorem Ipsum. Lorem Ipsum. Lorem Ipsum. Lorem Ipsum. Lorem Ipsum. Lorem Ipsum. Lorem Ipsum.
+                        Lorem Ipsum. Lorem Ipsum. Lorem Ipsum. Lorem Ipsum. Lorem Ipsum. Lorem Ipsum. Lorem Ipsum. Lorem Ipsum. Lorem Ipsum.
+            </div>
+            <button id="btn-right">Right scroll</button>
+        </div>
+        
+        
+</body>
+</html>

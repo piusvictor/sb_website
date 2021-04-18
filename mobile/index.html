@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="./dist/needsharebutton.min.css">
+    <link rel="stylesheet" href="./css/mystyle.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css" integrity="sha512-5A8nwdMOWrSz20fDsjczgUidUBR8liPYU+WymTZP1lmY9G6Oc7HlZv156XqnsgNUzTyMefFTcsFH/tnJE/+xBg==" crossorigin="anonymous" />
+    
+    <style>
+    /* Make the image fully responsive */
+    .carousel-inner img {
+      width: 100%;
+      height: 100%;
+    }
+    </style>
+    <title>Speechbase-mobile</title>
+</head>
+<body >
+   
+
+        <div style="position: absolute;top: 0px;left: 5px;z-index:2" id="translator-container">
+    
+            <div style="position:relative">
+                
+                <div id="google_translate_element" style="position: fixed;top:5%;right:1%;background-color:rgba(0, 0, 0, 0.5);padding:20px;border-radius:10px" >
+                    <h5 style="color:white">Change Language:</h5>
+                    <div style="position: absolute;color:white;top:2px;right:10px;cursor:pointer" id="close-btn">
+                        Close <i class="fa fa-times-circle-o" aria-hidden="true"></i>
+                    </div>
+                </div> 
+            </div>
+        </div>
+    
+        <!-- <div class="slider" style="width: 988px;height: 500px;margin:35px auto">
+            <img src="./images/pic5.PNG" alt="pic3" style="width:100%;height:100%">
+            <div class="slider-inner-content">
+                <h1 style="color: white; font-size:36px">Nifanye Nini kuepuka matatizo ya kuskia?</h1>
+                <p><a href="./pages/tatizokuskia.html" style="color:burlywood"><h3 >Bonyeza hapa kusoma</h3></a>            
+                </p>
+                <div id="share-button-3" class="need-share-button-default"  data-share-position="middleRight" data-share-networks="Mailto,Twitter,Pinterest,Facebook,GooglePlus,Linkedin"></div>
+            </div>
+        </div> -->
+<div style="width:500px;height:300px;margin:10px auto ">
+
+    <div id="demo" class="carousel slide" data-ride="carousel">
+
+        <!-- Indicators -->
+        <ul class="carousel-indicators" style="margin-top: 20px !important;">
+          <li data-target="#demo" data-slide-to="0" class="active"></li>
+          <li data-target="#demo" data-slide-to="1"></li>
+          <li data-target="#demo" data-slide-to="2"></li>
+        </ul>
+        
+        <!-- The slideshow -->
+        <div class="carousel-inner" >
+          <div class="carousel-item active" style="position: relative;">
+            <img src="./images/pic1.PNG" alt="Los Angeles" style="height:300px;">
+            
+            <div style="position: absolute;bottom:10%;height:250px;background-color:rgba(0, 0, 0, 0.5);width:50%;right:0px;padding:10px">
+                <h1 class="text-light">Hello this image caption</h1>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <img src="./images/pic2.PNG" alt="Chicago" style="height:300px">
+          </div>
+          <div class="carousel-item">
+            <img src="./images/pic3.PNG" alt="New York" style="height:300px">
+          </div>
+        </div>
+        
+        <!-- Left and right controls -->
+        <!-- <a class="carousel-control-prev" href="#demo" data-slide="prev">
+          <span class="carousel-control-prev-icon"></span>
+        </a>
+        <a class="carousel-control-next" href="#demo" data-slide="next">
+          <span class="carousel-control-next-icon"></span>
+        </a> -->
+      </div>
+
+</div>
+        
+
+    <script src="./dist/needsharebutton.js"></script>
+    <script src="./js/scripts.js"></script> 
+
+    <script type="text/javascript"> 
+		function googleTranslateElementInit() { 
+			new google.translate.TranslateElement( 
+				{pageLanguage: 'en'}, 
+				'google_translate_element' 
+			); 
+		} 
+	</script> 
+	
+	<script type="text/javascript" src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script> 
+
+    <script>
+
+        document.addEventListener('DOMContentLoaded',()=>{
+            console.log("DOM Loaded")
+            //const style_translate=document.querySelector(".goog-te-combo");
+           // style_translate.style.backgroundColor="red"; 
+
+            const translatorContainer=document.querySelector("#translator-container");
+            const closeBtn=document.querySelector("#close-btn");
+
+            closeBtn.addEventListener('click',function(){
+                translatorContainer.style.display="none";
+            })
+
+        });
+          
+    </script>
+</body>
+</html>

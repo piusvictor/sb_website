@@ -1,0 +1,5 @@
+Speechbase  color Scheme
+
+
+logo color- #E99119
+text-grey-color #494F54
