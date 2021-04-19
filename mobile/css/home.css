@@ -21,10 +21,10 @@ body{
 
 .nav-primary{
     margin-right: 2.5em;
-    color: #616161ab;
-    font-size: 1.1em;
+    color: #6c757d!important;
+    font-size: 1.15em;
     letter-spacing: 1px;
-    /* font-weight: 300; */
+    font-weight: 700;
 }
 
 
@@ -172,12 +172,12 @@ max-width: 750px;
     border-radius: 0px 0px 10px 10px;
     min-height:90px;
     width: 100%;
-    background-color:#774704ab;
-     backdrop-filter: blur(3px); 
+    background-color:#c0832bd1;
+     backdrop-filter: blur(2px); 
     position: absolute !important;
     bottom: 0px;
     z-index: 10;
-    color: #eee;
+    color: #fffdfd;
     display: grid;
     place-items: center;
     
@@ -186,7 +186,7 @@ max-width: 750px;
 .swiper-slider-caption>p>span{
     border-radius: 15px;
     padding:4px 8px;
-    color: #eee;
+    color: #fffdfd;
     border:1px solid #eee;
     font-weight: 400;
     font-size: 0.9em;
@@ -242,7 +242,7 @@ max-width: 750px;
 
 .hero-section-content{
     min-height:230px;
-    background-color: #5a350188;
+    background-color: rgba(180,117,29,0.83);
     padding: 15px 10px;
 }
 
@@ -255,6 +255,7 @@ max-width: 750px;
   outline: none; 
   border-radius: 25px;
   padding: 5px 15px;
+  font-weight: 500;
   
   
   
@@ -421,7 +422,7 @@ background-color: #E99119;
 }
 
 .section-header{
-    color:#E99119;
+    color:rgb(234,150,32);
     font-size: 1.5em;
     font-weight: 500;
 }
@@ -577,10 +578,7 @@ color: rgba(0,0,0,0.7);
 
 
 
-.text-block{
-    
 
-}
 
 
 .our-specialization{
@@ -601,7 +599,7 @@ color: rgba(0,0,0,0.7);
     padding:20px 0px;
     font-size: 1.2em;
     text-align: center;
-    color: #E99119;
+    color: rgb(234,150,32);
 }
 
 .specialization-image{
