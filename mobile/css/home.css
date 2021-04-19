@@ -30,10 +30,20 @@ body{
 }
 
 
+
+
+
+
 .swiper-pagination-bullet.swiper-pagination-bullet-active{
     background-color: #b16905 !important;
 }
 
+
+.news-heading{  
+   border-radius: 10px 10px 0px 0px;
+    background: linear-gradient(8deg, rgba(255,249,249,0.4433123591233369) 4%, rgba(255, 249, 246, 0.827) 62%),url('../screenshots/svg-resources/Scattered-Forcefields.svg');
+/* background-position: (0%,90%); */
+}
 
 .article-news-title{
     color:#E99119;
