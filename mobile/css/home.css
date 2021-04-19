@@ -41,7 +41,7 @@ body{
 
 .news-heading{  
    border-radius: 10px 10px 0px 0px;
-    background: linear-gradient(8deg, rgba(255,249,249,0.4433123591233369) 4%, rgba(255, 249, 246, 0.827) 62%),url('../screenshots/svg-resources/Scattered-Forcefields.svg');
+    background: linear-gradient(8deg, rgba(255,249,249,0.8433123591233369) 9%, rgba(212, 209, 207, 0.356) 62%),url('../screenshots/svg-resources/Scattered-Forcefields.svg');
 /* background-position: (0%,90%); */
 }
 
