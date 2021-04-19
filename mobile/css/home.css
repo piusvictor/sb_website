@@ -176,7 +176,7 @@ max-width: 750px;
 .swiper-slider-img{
     border-radius: 10px;
     width:100%;
-    height: 100%;
+    height: 450px;
     object-fit: cover;
 }
 
@@ -228,7 +228,7 @@ max-width: 750px;
     justify-content: space-between;
    
     
-    background-image: url('../images/hearing4.jpg');
+    background-image: url('../images/slider1.png');
     min-height:550px;
     
     background-size: cover;
