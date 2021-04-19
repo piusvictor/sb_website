@@ -173,8 +173,8 @@ max-width: 750px;
     border-radius: 0px 0px 10px 10px;
     min-height:90px;
     width: 100%;
-    background-color:#c0832bd1;
-     backdrop-filter: blur(2px); 
+    background-color:#c0832b;
+     /* backdrop-filter: blur(2px);  */
     position: absolute !important;
     bottom: 0px;
     z-index: 10;
