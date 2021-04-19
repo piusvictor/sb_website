@@ -265,6 +265,7 @@ max-width: 750px;
 .caregive-button{
     color:#a05f04;
     border: none;
+    background-color: white !important;
 }
 
 .slt-button{
