@@ -133,7 +133,7 @@ body{
  </div>      -->
 
 <div class="tab-header" >
-<div >
+<div style="cursor: pointer;">
 <i onclick="window.history.back()" class="fa fa-long-arrow-left" style="font-size: 24px;"></i>
 </div>
 <div><h6>Neurological Disorder Information</h6>
@@ -156,7 +156,7 @@ body{
             
             <div>
               <h6 style="font-weight: 500;">Hatua za kuchukua kuepukana na hatari za ukiziwi</h6>
-              <p onclick="navigator.share({url:'https://developer.mozilla.org',title:'MDN',text:'Testing'})" style="word-wrap: break-word;">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Eaque incidunt voluptatibus culpa dicta laboriosam! Nemo voluptate, error dicta iste architecto dolor dolores exercitationem culpa, modi explicabo deleniti hic a. Soluta.</p>
+              <p onclick="navigator.share({url:'https://developer.mozilla.org',title:'MDN',text:'Testing'})" style="word-wrap: break-word;cursor:pointer">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Eaque incidunt voluptatibus culpa dicta laboriosam! Nemo voluptate, error dicta iste architecto dolor dolores exercitationem culpa, modi explicabo deleniti hic a. Soluta.</p>
             </div>
            
           </div>
@@ -238,10 +238,18 @@ body{
           </div>
 
         </div>
-        <div id="pdf" class="col s12">pdf contents
-
+        <div id="pdf" class="col s12 container">
+          PPT contents <br>
+          <ul>
+            <li><a href="./pdf/neural.pdf" download="./pdf/neural.pdf">1. Click to download, Neurological information PDF document  </a></li>
+            <li></li>
+            <li></li>
+          </ul>
+          
         </div>
-        <div id="ppt" class="col s12">ppt contents
+        <div id="ppt" class="col s12">PPT contents
+          <br>
+          1.<a href="./ppt/neural.pptx" download="./ppt/neural.pptx">Click to download, Neurological information PPT document  </a>
 
         </div>
       </div>
